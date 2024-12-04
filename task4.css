@@ -1,0 +1,156 @@
+/* General Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url('https://img.freepik.com/premium-photo/laptop-with-blue-purple-background-picture-coffee-mug-screen_631068-26189.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+/* Main Container */
+.container {
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 600px;
+    overflow-y: auto;
+    max-height: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Header Styling */
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Task Input Styling */
+.task-input {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.task-input input {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    flex: 1;
+    min-width: 100px;
+}
+
+.task-input button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.task-input button:hover {
+    background-color: #218838;
+}
+
+/* Task List Styling */
+#taskList {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Individual Task Styling */
+.task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.task div {
+    flex: 1;
+    min-width: 150px;
+}
+
+/* Completed Task */
+.task.completed div {
+    text-decoration: line-through;
+    color: #777;
+}
+
+/* Actions Button Styling */
+.actions {
+    display: flex;
+    gap: 5px;
+}
+
+.actions button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.actions .complete-btn {
+    background-color: #007bff;
+    color: white;
+}
+
+.actions .update-btn {
+    background-color: #ffc107;
+    color: white;
+}
+
+.actions .delete-btn {
+    background-color: #dc3545;
+    color: white;
+}
+
+.actions button:hover {
+    opacity: 0.9;
+}
+
+/* Responsive Design */
+@media (max-width: 500px) {
+    .task-input {
+        flex-direction: column;
+    }
+
+    .task-input input,
+    .task-input button {
+        width: 100%;
+    }
+
+    .task {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .actions {
+        width: 100%;
+        justify-content: space-around;
+    }
+}
